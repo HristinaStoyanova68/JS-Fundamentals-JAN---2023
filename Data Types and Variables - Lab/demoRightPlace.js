@@ -8,10 +8,11 @@ function demoRightPlace(text, charToChange, targetText) {
             newText += text[i];
         }
     }
-    if (newText === targetText) {
-        console.log(`Matched`);
-    } else {
-        console.log(`Not Matched`);
-    }
+    // if (newText === targetText) {
+    //     console.log(`Matched`);
+    // } else {
+    //     console.log(`Not Matched`);
+    // }
+    console.log(newText === targetText ? `Matched` : `Not Matched`);
 }
 demoRightPlace('Str_ng', 'o', 'Strong');
