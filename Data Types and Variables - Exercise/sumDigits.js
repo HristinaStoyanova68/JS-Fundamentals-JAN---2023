@@ -1,8 +1,8 @@
 function sumDigits(num) {
-    num = num.toString();
+    let numToString = num.toString();
     let sum = 0;
-    for (let i = 0; i < num.length; i++) {
-        let currDigit = Number(num[i]);
+    for (let i = 0; i < numToString.length; i++) {
+        let currDigit = Number(numToString[i]);
         sum += currDigit;
     }
     console.log(sum);
