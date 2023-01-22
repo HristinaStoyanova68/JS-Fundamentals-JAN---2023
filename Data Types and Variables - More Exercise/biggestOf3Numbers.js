@@ -1,4 +1,5 @@
 function biggestOf3Numbers(num1, num2, num3) {
+    
 
     let biggestNum = Number.MIN_SAFE_INTEGER;
     if (num1 > biggestNum) {
@@ -16,8 +17,4 @@ function biggestOf3Numbers(num1, num2, num3) {
 
 }
 
-biggestOf3Numbers(2,
-
-    2,
-
-    2);
+biggestOf3Numbers(2, 2, 2);
