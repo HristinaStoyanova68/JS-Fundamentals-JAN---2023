@@ -1,9 +1,9 @@
 function binaryToDecimal(num) {
-    num = num.toString();
+    let numToString = num.toString();
     let decimal = 0;
-    for (let i = 0; i < num.length; i++) {
-        let currDigit = Number(num[i]);
-        let powNum = (num.length - 1) - i;
+    for (let i = 0; i < numToString.length; i++) {
+        let currDigit = Number(numToString[i]);
+        let powNum = (numToString.length - 1) - i;
         decimal += currDigit * Math.pow(2, powNum);
 
 
