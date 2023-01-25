@@ -8,4 +8,4 @@ function reverseInPlace(input) {
     console.log(input.join(" "));
 }
 
-reverseInPlace(['33', '123', '0', 'dd']);
+reverseInPlace(['a', 'b', 'c', 'd', 'e']);
