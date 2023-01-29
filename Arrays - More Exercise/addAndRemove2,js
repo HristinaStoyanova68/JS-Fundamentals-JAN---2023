@@ -22,4 +22,4 @@ function addAndRemove(input) {
         console.log(printLine.join(' '));
     }
 }
-addAndRemove(['remove', 'remove', 'add']);
+addAndRemove(['remove', 'remove', 'remove']);
