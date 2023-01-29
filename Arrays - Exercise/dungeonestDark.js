@@ -7,23 +7,17 @@ function dungeonestDark(input) {
     let coins = 0;
     let monsterName = "";
     for (let i = 0; i < inputAsString.length; i++) {
-
         let currElem = inputAsString[i];
-
         if (currElem !== "|") {
             tempRoom += currElem;
             if (i === inputAsString.length - 1) {
                 roomArray.push(tempRoom);
             }
-
         } else {
             roomArray.push(tempRoom);
             tempRoom = "";
-
         }
-
     }
-    //console.log(roomArray)
     for (let i = 0; i < roomArray.length; i++) {
         let currRoom = roomArray[i];
         let currRoomArray = [];
@@ -36,36 +30,25 @@ function dungeonestDark(input) {
                 if (j === currRoom.length - 1) {
                     currRoomArray.push(tempRoomArray);
                 }
-
             } else {
                 currRoomArray.push(tempRoomArray);
                 tempRoomArray = "";
-
             }
-
         }
         let item = currRoomArray[0];
         let num = Number(currRoomArray[1]);
 
         switch (item) {
             case "potion":
-                
-                    if ((health + num) > 100) {
-                        let currHealed = num - ((health + num) - 100);
-                        console.log(`You healed for ${currHealed} hp.`);
-                        health = 100;
-                        console.log(`Current health: ${health} hp.`);
-                        
-                    } else {
-                        console.log(`You healed for ${num} hp.`);
-                        health += num;
-                        console.log(`Current health: ${health} hp.`);
-                    }
-                
-                // else if (health >= 100) {
-                //     health = 100;
-                // }
-
+                if ((health + num) > 100) {
+                    let currHealed = num - ((health + num) - 100);
+                    console.log(`You healed for ${currHealed} hp.`);
+                    health = 100;
+                } else {
+                    console.log(`You healed for ${num} hp.`);
+                    health += num;
+                }
+                console.log(`Current health: ${health} hp.`);
                 break;
             case "chest":
                 console.log(`You found ${num} coins.`);
@@ -74,24 +57,15 @@ function dungeonestDark(input) {
             default:
                 monsterName = item;
                 health -= num;
-
-                if (health > 0)  {
+                if (health > 0) {
                     console.log(`You slayed ${monsterName}.`);
-                    
-
                 } else {
-                    
-                        console.log(`You died! Killed by ${monsterName}.`);
-                        console.log(`Best room: ${i + 1}`);
-                        return;
-                    
+                    console.log(`You died! Killed by ${monsterName}.`);
+                    console.log(`Best room: ${i + 1}`);
+                    return;
                 }
                 break;
-
         }
-         
-
-
     }
     console.log("You've made it!");
     console.log(`Coins: ${coins}`);
