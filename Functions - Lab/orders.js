@@ -15,7 +15,7 @@ function orders(order, quantity) {
             break;
     }
     let total = price * quantity;
-    return `${total.toFixed(2)}`;
+    return total.toFixed(2);
 
 }
 
