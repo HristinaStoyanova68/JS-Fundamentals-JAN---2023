@@ -4,12 +4,12 @@ function signCheck(num1, num2, num3) {
     //create a function to change the sign if second parameter is true
 
     let sign = 'Positive';
-    let isNum1Neative = num1 < 0;
-    sign = checkAndChangeSign(sign, isNum1Neative);
-    let isNum2Neative = num2 < 0;
-    sign = checkAndChangeSign(sign, isNum2Neative);
-    let isNum3Neative = num3 < 0;
-    sign = checkAndChangeSign(sign, isNum3Neative);
+    let isNum1Negative = num1 < 0;
+    sign = checkAndChangeSign(sign, isNum1Negative);
+    let isNum2Negative = num2 < 0;
+    sign = checkAndChangeSign(sign, isNum2Negative);
+    let isNum3Negative = num3 < 0;
+    sign = checkAndChangeSign(sign, isNum3Negative);
     return sign;
 
     function checkAndChangeSign(sign, shouldChange) {
