@@ -1,13 +1,5 @@
 function loadingBar(num) {
 
-    if (num < 100) {
-
-        return `${num}% [${fullLoadingBar(num)}]\nStill loading...`;
-
-    } else {
-        return `100% Complete!\n[${fullLoadingBar(num)}]`;
-    }
-
     function fullLoadingBar(num) {
 
         let fullLoadingBar = '';
@@ -26,7 +18,16 @@ function loadingBar(num) {
 
         return `${fullLoadingBar}`;
     }
+    if (num < 100) {
+
+        console.log(`${num}% [${fullLoadingBar(num)}]`);
+        console.log(`Still loading...`);
+
+    } else {
+        console.log(`100% Complete!`);
+        console.log(`[${fullLoadingBar(num)}]`);
+    }
 
 }
 
-console.log(loadingBar(100));
+loadingBar(100);
