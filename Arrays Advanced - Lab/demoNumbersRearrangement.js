@@ -11,10 +11,11 @@ function negativeOrPositiveNumbers(array) {
             newArray.push(num);
         }
     }
-    console.log(newArray.join('\n'));
+    for (let number of newArray) {
+        console.log(number);
+    }
 
 }
-
 negativeOrPositiveNumbers(['7', '-2', '8', '9']);
 console.log('...................');
 negativeOrPositiveNumbers(['3', '-2', '0', '-1']);
