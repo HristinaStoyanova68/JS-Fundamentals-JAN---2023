@@ -13,7 +13,9 @@ function sortAnArrayBy2Criteria(input) {
                 minLength = currElem.length;
                 smalestElem = currElem;
             }
+        
         }
+        
         newArray.push(smalestElem);
         let index = input.indexOf(smalestElem);
         input.splice(index, 1);
