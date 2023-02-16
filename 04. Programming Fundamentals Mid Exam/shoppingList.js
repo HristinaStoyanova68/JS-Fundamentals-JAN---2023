@@ -49,12 +49,12 @@ function shoppingList(input) {
     console.log(shoppingList.join(', '));
 }
 
-// shoppingList([
-// "Tomatoes!Potatoes!Bread",
-// "Unnecessary Milk", 
-// "Urgent Tomatoes", 
-// "Go Shopping!"]);
-// console.log('............');
+shoppingList([
+"Tomatoes!Potatoes!Bread",
+"Unnecessary Milk", 
+"Urgent Tomatoes", 
+"Go Shopping!"]);
+console.log('............');
 shoppingList([
     "Milk!Pepper!Salt!Water!Banana",
     "Urgent Salt",
