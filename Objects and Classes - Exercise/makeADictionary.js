@@ -10,9 +10,9 @@ function makeADictionary(dataAsJSON) {
             let key = keys[0];
             myDictionary[key] = object[key];
         }
-        let sortedKey = Object.keys(myDictionary).sort((keyA, keyB) => keyA.localeCompare(keyB));
+        let sortedKeys = Object.keys(myDictionary).sort((keyA, keyB) => keyA.localeCompare(keyB));
 
-        for (let key of sortedKey) {
+        for (let key of sortedKeys) {
             console.log(`Term: ${key} => Definition: ${myDictionary[key]}`);
         }
     }
