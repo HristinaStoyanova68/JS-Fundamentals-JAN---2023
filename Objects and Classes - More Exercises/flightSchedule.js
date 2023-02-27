@@ -19,7 +19,7 @@ function flightSchedule(input) {
         if (flights[fly].Status === String(input[2])) {
             console.log(flights[fly]);
         }
-    }
+    };
 
 }
 
