@@ -6,7 +6,7 @@ function addressBook(input) {
         let [name, address] = line.split(':');
         addressBook[name] = address;
     }
-
+    
     let sorted = Object.keys(addressBook).sort((a, b) => a.localeCompare(b));
 
     for (const name of sorted) {

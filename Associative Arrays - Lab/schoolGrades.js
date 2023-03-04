@@ -13,6 +13,7 @@ function schoolGrades(input) {
             students[name] = numbersOfGrades;
         }
     }
+    
 
     let sorted = Object.entries(students).sort((a, b) => a[0].localeCompare(b[0]));
    
