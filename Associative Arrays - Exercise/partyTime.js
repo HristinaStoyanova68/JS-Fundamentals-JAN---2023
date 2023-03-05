@@ -2,27 +2,28 @@ function partyTime(input) {
 
     let index = input.indexOf('PARTY');
 
-    let listOfGuests = new Set();
+    let listOfGuests = [];
 
     for (let i = 0; i < index; i++) {
-        listOfGuests.add(input[i]);
+        listOfGuests.push(input[i]);
     }
-    let listOfGuestsAsArr = Array.from(listOfGuests);
-    let vipGuests = sortingStringByHavingNumberOnTop(listOfGuestsAsArr)[0];
-    let regularGuests = sortingStringByHavingNumberOnTop(listOfGuestsAsArr)[1];
+   
+    let vipGuests = sortingStringByHavingNumberOnTop(listOfGuests)[0];
+    let regularGuests = sortingStringByHavingNumberOnTop(listOfGuests)[1];
 
     for (let i = index + 1; i < input.length; i++) {
 
         if (vipGuests.includes(input[i])) {
             vipGuests.splice(vipGuests.indexOf(input[i]), 1);
-        } else if (regularGuests.includes(input[i])) {
+        } 
+        if (regularGuests.includes(input[i])) {
             regularGuests.splice(regularGuests.indexOf(input[i]), 1);
         }
     }
     let guestCount = vipGuests.length + regularGuests.length;
     console.log(guestCount);
-    vipGuests.forEach((x => console.log(x)));
-    regularGuests.forEach((x => console.log(x)));
+    vipGuests.forEach(x => console.log(x));
+    regularGuests.forEach(x => console.log(x));
     
     function sortingStringByHavingNumberOnTop(input) {
 
@@ -48,7 +49,6 @@ function partyTime(input) {
 }
 
 partyTime([
-    '7IK9Yo0h',
     '9NoBUajQ',
     'Ce8vwPmE',
     'SVQXQCbc',
