@@ -8,7 +8,7 @@ function aMinerTask(input) {
         if (!resourceData.hasOwnProperty(resource)) {
             resourceData[resource] = quantity;
         } else {
-            resourceData[resource] = resourceData[resource] + quantity;
+            resourceData[resource] += quantity;
         }
     }
     let resourceDataAsArr = Object.entries(resourceData);
