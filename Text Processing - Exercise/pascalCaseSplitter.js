@@ -4,13 +4,11 @@ function pascalCaseSplitter(string) {
     let lower = string.toLowerCase();
 
     for (let i = 1; i < string.length; i++) {
-        const current = string[i];
-
-        if (current !== lower[i]) {
-            result += `, ${current}`
-        } else {
-            result += current;
-        }
+    
+        if (string[i] !== lower[i]) {
+            result += ', ';
+        } 
+        result += string[i];
     }
     console.log(result);
 }
