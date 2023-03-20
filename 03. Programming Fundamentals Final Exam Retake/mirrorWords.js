@@ -10,12 +10,10 @@ function mirroWords(input) {
         console.log('No mirror words!');
         return;
     } else {
-
         console.log(`${matchedPairsCount.length} word pairs found!`);
     }
 
     let matchedPairs = pattern.exec(input[0]);
-
     let mirrorWords = new Map();
 
     while (matchedPairs !== null) {
@@ -38,7 +36,6 @@ function mirroWords(input) {
     if (mirrorWords.size === 0) {
         console.log('No mirror words!');
     } else {
-
         let mirroWordsAsArr = [];
 
         for (const element of mirrorWords) {
