@@ -24,7 +24,7 @@ function passwordReset(input) {
             let length = Number(token2);
 
             let passwordStringAsArr = passwordString.split('');
-            let cutted = passwordStringAsArr.splice(index, length);
+            passwordStringAsArr.splice(index, length);
             passwordString = passwordStringAsArr.join('');
 
             console.log(passwordString);
@@ -69,3 +69,4 @@ passwordReset(["up8rgoyg3r1atmlmpiunagt!-irs7!1fgulnnnqy",
     "Substitute ? .!.",
     "Done"])
     ;
+   
