@@ -28,7 +28,6 @@ function santasGifts(input) {
                 santaPositions = index;
             }
 
-
         } else if (command === 'Gift') {
             let index = Number(tokens[0]);
             let houseNumber = tokens[1];
@@ -44,11 +43,9 @@ function santasGifts(input) {
             let indexOfSecond = houses.indexOf(tokens[1]);
 
             if (indexOfFirst !== -1 && indexOfSecond !== - 1) {
-                const swap = (array, i, j) => [array[i], array[j]] = [array[j], array[i]];
-
-                let array = houses;
-
-                swap(array, indexOfFirst, indexOfSecond);
+                let temp = houses[indexOfFirst];
+                houses[indexOfFirst] = houses[indexOfSecond];
+                houses[indexOfSecond] = temp;
             }
         }
     }
